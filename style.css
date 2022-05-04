@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.text {
+    width: 70vw;
+    text-align: justify;
+    font-size: 36px;
+    color: blanchedalmond;
+    user-select: none;
+}
+span {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    animation: fader 2s linear forwards;
+}
+
+@keyframes fader {
+    20% {
+        color: yellow;
+    }
+    30% {
+        color: red;
+    }
+    100% {
+        opacity: 0;
+        filter: blur(40px);
+        color: brown;
+        transform: translateX(200px) translateY(-150px) rotate(720deg) scale(4);
+    }
+}
